@@ -1,10 +1,14 @@
 package com.company;
 
+import java.util.Arrays;
+
 public class Farm {
     private String adress, ownerName;
-    private int cows, sheeps, horses;
+    private Cow[] cows;
+    private Sheep[] sheeps;
+    private Horse[] horses;
 
-    public Farm(String adress, String ownerName, int cows, int sheeps, int horses) {
+    public Farm(String adress, String ownerName, Cow[] cows, Sheep[] sheeps, Horse[] horses) {
         this.adress = adress;
         this.ownerName = ownerName;
         this.cows = cows;
@@ -28,29 +32,38 @@ public class Farm {
         this.ownerName = ownerName;
     }
 
-    public int getCows() {
+    public Cow[] getCows() {
         return cows;
     }
 
-    public void setCows(int cows) {
+    public void setCows(Cow[] cows) {
         this.cows = cows;
     }
 
-    public int getSheeps() {
+    public Sheep[] getSheeps() {
         return sheeps;
     }
 
-    public void setSheeps(int sheeps) {
+    public void setSheeps(Sheep[] sheeps) {
         this.sheeps = sheeps;
     }
 
-    public int getHorses() {
+    public Horse[] getHorses() {
         return horses;
     }
 
-    public void setHorses(int horses) {
+    public void setHorses(Horse[] horses) {
         this.horses = horses;
     }
 
-
+    @Override
+    public String toString() {
+        return "Farm {" +
+                "adress = '" + adress + '\'' +
+                ", ownerName='" + ownerName + '\'' +
+                ", cows=" + cows.length +
+                ", sheeps=" + sheeps.length +
+                ", horses=" + horses.length +
+                '}';
+    }
 }
